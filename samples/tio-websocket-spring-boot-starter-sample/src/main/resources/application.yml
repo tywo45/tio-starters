@@ -5,7 +5,7 @@ tio:
       port: 9876
       heartbeat-timeout: 60000
     cluster:
-      enabled: true
+      enabled: false
     redis:
       ip: 192.168.1.225
       port: 6379

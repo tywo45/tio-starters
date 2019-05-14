@@ -17,11 +17,12 @@ public class MyWebSocketMsgHandler implements TioWebSocketMsgHandler {
 
     @Override
     public void onAfterHandshaked(HttpRequest httpRequest, HttpResponse httpResponse, ChannelContext channelContext) throws Exception {
-
+        System.out.println("握手成功");
     }
 
     @Override
     public Object onBytes(WsRequest wsRequest, byte[] bytes, ChannelContext channelContext) throws Exception {
+        System.out.println("接收到bytes消息");
         return null;
     }
 
@@ -32,6 +33,7 @@ public class MyWebSocketMsgHandler implements TioWebSocketMsgHandler {
 
     @Override
     public Object onText(WsRequest wsRequest, String s, ChannelContext channelContext) throws Exception {
-        return null;
+        System.out.println("接收到文本消息："+s);
+        return "服务器收到了消息："+s;
     }
 }

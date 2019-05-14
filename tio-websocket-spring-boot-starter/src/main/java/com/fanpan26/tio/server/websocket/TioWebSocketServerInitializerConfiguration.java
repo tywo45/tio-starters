@@ -25,6 +25,7 @@ public class TioWebSocketServerInitializerConfiguration
     public void start() {
         new Thread(() -> {
             webSocketServerBootstrap.contextInitialized();
+            running = true;
         }).start();
     }
 

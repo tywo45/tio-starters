@@ -2,6 +2,7 @@ package com.fanpan26.tio.server.websocket;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.ApplicationContext;
 import org.tio.cluster.TioClusterConfig;
 import org.tio.cluster.redisson.RedissonTioClusterTopic;
 import org.tio.core.intf.GroupListener;
@@ -16,7 +17,7 @@ import java.io.IOException;
 /**
  * @author fanpan26
  * */
-public class TioWebSocketServerBootstrap {
+public final class TioWebSocketServerBootstrap {
 
     private static final Logger logger = LoggerFactory.getLogger(TioWebSocketServerBootstrap.class);
 
@@ -52,6 +53,10 @@ public class TioWebSocketServerBootstrap {
         this.tioWebSocketMsgHandler = tioWebSocketMsgHandler;
         this.ipStatListener = ipStatListener;
         this.groupListener = groupListener;
+    }
+
+    public ServerGroupContext getServerGroupContext() {
+        return serverGroupContext;
     }
 
     public void contextInitialized() {

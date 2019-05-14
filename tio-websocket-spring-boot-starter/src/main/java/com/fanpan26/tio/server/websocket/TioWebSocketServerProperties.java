@@ -32,5 +32,15 @@ public class TioWebSocketServerProperties {
     private Integer port = 9876;
     private Integer heartbeatTimeout = 60000;
 
+    public String getBinaryType() {
+        return binaryType;
+    }
+
+    public void setBinaryType(String binaryType) {
+        this.binaryType = binaryType;
+    }
+
+    private String binaryType = "text";
+
 
 }
