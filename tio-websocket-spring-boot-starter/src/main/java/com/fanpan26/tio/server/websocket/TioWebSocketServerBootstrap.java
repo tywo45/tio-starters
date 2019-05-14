@@ -46,6 +46,9 @@ public class TioWebSocketServerBootstrap {
         }
         this.serverProperties = serverProperties;
         this.clusterProperties = clusterProperties;
+        if(redissonTioClusterTopic == null){
+            logger.info("cluster mod closed");
+        }
         this.redissonTioClusterTopic = redissonTioClusterTopic;
         this.tioWebSocketMsgHandler = tioWebSocketMsgHandler;
         this.ipStatListener = ipStatListener;
@@ -53,6 +56,7 @@ public class TioWebSocketServerBootstrap {
     }
 
     public void contextInitialized() {
+        logger.info("initialize tio websocket server");
         try {
             initTioWebSocketConfig();
             initTioWebSocketServer();
