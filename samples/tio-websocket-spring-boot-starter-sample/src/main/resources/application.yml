@@ -1,0 +1,7 @@
+tio:
+  websocket:
+    server:
+      port: 9876
+      heartbeat-timeout: 60000
+    cluster:
+      enabled: false

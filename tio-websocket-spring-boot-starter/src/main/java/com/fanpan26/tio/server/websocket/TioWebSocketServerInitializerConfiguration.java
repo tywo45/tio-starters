@@ -1,5 +1,6 @@
 package com.fanpan26.tio.server.websocket;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.SmartLifecycle;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
@@ -16,11 +17,14 @@ public class TioWebSocketServerInitializerConfiguration
     private int order = 1;
     private boolean running = false;
 
+    @Autowired
+    private TioWebSocketServerBootstrap webSocketServerBootstrap;
+
 
     @Override
     public void start() {
         new Thread(() -> {
-
+            webSocketServerBootstrap.contextInitialized();
         }).start();
     }
 
