@@ -1,5 +1,5 @@
 # tio-starters
-tio spring boot starter
+tio spring boot starter，仅供学习，未发布到maven仓库。
 
 ## 快速开始
 * 引入 jar 包
