@@ -1,6 +1,5 @@
 package com.fanpan26.tio.server.websocket;
 
-import com.fanpan26.tio.server.websocket.common.TioWebSocketServerDefaultUuid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tio.cluster.TioClusterConfig;

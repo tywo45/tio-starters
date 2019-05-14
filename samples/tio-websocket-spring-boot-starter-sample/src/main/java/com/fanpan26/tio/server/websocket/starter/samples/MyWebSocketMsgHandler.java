@@ -1,7 +1,7 @@
 package com.fanpan26.tio.server.websocket.starter.samples;
 
 import com.fanpan26.tio.server.websocket.TioWebSocketMsgHandler;
-import com.fanpan26.tio.server.websocket.common.WebSocketMsgHandler;
+import com.fanpan26.tio.server.websocket.WebSocketMsgHandler;
 import org.tio.core.ChannelContext;
 import org.tio.http.common.HttpRequest;
 import org.tio.http.common.HttpResponse;

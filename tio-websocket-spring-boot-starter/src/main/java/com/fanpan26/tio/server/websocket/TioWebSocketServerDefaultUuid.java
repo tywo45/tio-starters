@@ -1,4 +1,4 @@
-package com.fanpan26.tio.server.websocket.common;
+package com.fanpan26.tio.server.websocket;
 
 import org.tio.core.intf.TioUuid;
 import org.tio.utils.hutool.Snowflake;
