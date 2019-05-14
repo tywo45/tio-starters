@@ -50,6 +50,7 @@ public class TioWebSocketServerAutoConfiguration {
     @Autowired(required = false)
     private RedissonTioClusterTopic redissonTioClusterTopic;
 
+
     @Bean
     public TioWebSocketServerBootstrap webSocketServerBootstrap() {
         return new TioWebSocketServerBootstrap(serverProperties,

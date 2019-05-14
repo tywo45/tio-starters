@@ -1,14 +1,15 @@
 package com.fanpan26.tio.server.websocket.starter.samples;
 
 import com.fanpan26.tio.server.websocket.TioWebSocketMsgHandler;
-import org.springframework.stereotype.Service;
+import com.fanpan26.tio.server.websocket.common.WebSocketMsgHandler;
 import org.tio.core.ChannelContext;
 import org.tio.http.common.HttpRequest;
 import org.tio.http.common.HttpResponse;
 import org.tio.websocket.common.WsRequest;
 
-@Service
+@WebSocketMsgHandler
 public class MyWebSocketMsgHandler implements TioWebSocketMsgHandler {
+
     @Override
     public HttpResponse handshake(HttpRequest httpRequest, HttpResponse httpResponse, ChannelContext channelContext) throws Exception {
         return httpResponse;
